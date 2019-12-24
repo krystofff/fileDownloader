@@ -22,7 +22,6 @@ type WriteCounter struct {
 
 // configuracion de barra de progreso
 func NewWriteCounter(total int) *WriteCounter {
-
 	b := pb.New(total)
 	b.SetRefreshRate(RefreshRate)
 	b.ShowTimeLeft = true
@@ -67,7 +66,6 @@ func main() {
 // Descarga url en archivo local
 // io.TeeReader reporta el progreso de la descarga
 func DownloadFile(url string, filename string) error {
-
 	// crea archivo temporal para no sobreescribir alguno con el mismo nombre
 	out, err := os.Create(filename + ".tmp")
 	if err != nil {
